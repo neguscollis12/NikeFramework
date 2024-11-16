@@ -3,6 +3,7 @@ package com.automation.nike.tests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -25,7 +26,7 @@ public abstract class BaseTest {
 
     @AfterMethod
     public void cleanUp(){
-        driver.quit();
+       // driver.quit();
     }
 
 

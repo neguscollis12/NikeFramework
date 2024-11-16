@@ -83,6 +83,21 @@ public class SearchProductsTest extends BaseTest{
 
     }
 
+    @Test
+    public void SearchProductsBackpackTest() throws InterruptedException {
+        searchProductsPage = new SearchProductsPage(driver);
+        searchProductsPage.searchProducts("Backpack");
+
+        Thread.sleep(5000);
+
+        int product = 1;
+        for(String results : searchProductsPage.getSearchResults()){
+            Assert.assertTrue(results.contains("Backpack") , "Product: " + product + " does not contain Backpack");
+            product++;
+        }
+
+    }
+
 
 
 }
