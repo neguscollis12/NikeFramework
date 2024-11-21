@@ -16,17 +16,14 @@ public abstract class BaseTest {
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://www.nike.com");
+        driver.get("https://www.nike.com/");
         driver.manage().window().maximize();
-
-
-
     }
 
 
     @AfterMethod
     public void cleanUp(){
-       // driver.quit();
+        driver.quit();
     }
 
 
